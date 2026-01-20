@@ -31,12 +31,9 @@ Projekt slouží jako ukázka práce s:
 - script.js – logika hry  
 - README.md – popis projektu  
 
-## Spuštění projektu
-Projekt je dostupný online na adrese:
-
-
 
 ## Autor
 Jméno: Jakub Kirschner
 Třída: IT2
 Rok: 2026  
+
