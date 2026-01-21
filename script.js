@@ -2,9 +2,8 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-// =======================
+
 // TŘÍDA PRO PŘEKÁŽKY
-// =======================
 class Obstacle {
     constructor(x, y, width, height, speed, color) {
         this.x = x;             // pozice X
@@ -27,9 +26,8 @@ class Obstacle {
     }
 }
 
-// =======================
+
 // HRÁČ
-// =======================
 let player = {
     x: 180,
     y: 550,
@@ -47,9 +45,7 @@ let gameOver = false;
 let leftPressed = false;
 let rightPressed = false;
 
-// =======================
 // OVLÁDÁNÍ
-// =======================
 document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") leftPressed = true;
     if (e.key === "ArrowRight") rightPressed = true;
@@ -60,9 +56,8 @@ document.addEventListener("keyup", (e) => {
     if (e.key === "ArrowRight") rightPressed = false;
 });
 
-// =======================
+
 // VYTVÁŘENÍ RŮZNÝCH TYPŮ PŘEKÁŽEK
-// =======================
 function createObstacle() {
     const type = Math.floor(Math.random() * 3); 
     // Náhodně vybereme typ 0, 1 nebo 2
@@ -106,9 +101,8 @@ function createObstacle() {
     obstacles.push(obs);
 }
 
-// =======================
+
 // LOGIKA HRY
-// =======================
 function update() {
     if (gameOver) return;
 
@@ -143,9 +137,8 @@ function update() {
     document.getElementById("score").textContent = score;
 }
 
-// =======================
+
 // VYKRESLOVÁNÍ
-// =======================
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -159,9 +152,8 @@ function draw() {
     }
 }
 
-// =======================
+
 // HLAVNÍ SMYČKA
-// =======================
 function gameLoop() {
     update();
     draw();
@@ -183,3 +175,4 @@ function restartGame() {
 
 // Spuštění hry
 gameLoop();
+
