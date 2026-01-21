@@ -71,7 +71,7 @@ function createObstacle() {
             -40,
             40,
             40,
-            3,
+            5,
             "red"
         );
     } 
@@ -82,7 +82,7 @@ function createObstacle() {
             -30,
             80,
             30,
-            2,
+            4,
             "orange"
         );
     } 
@@ -93,7 +93,7 @@ function createObstacle() {
             -25,
             25,
             25,
-            5,
+            8,
             "purple"
         );
     }
@@ -175,4 +175,5 @@ function restartGame() {
 
 // Spuštění hry
 gameLoop();
+
 
